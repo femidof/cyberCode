@@ -24,7 +24,11 @@ export default function CodingPage({ params }: { params: { slug: string } }) {
   }, [replId]);
 
   if (!podCreated) {
-    return <>Booting...</>;
+    return (
+      <>
+        <div className="container flex flex-col w-full justify-center items-center text-4xl space-y-6">Booting...</div>
+      </>
+    );
   }
   return <CodingPagePostPodCreation replId={replId} />;
 }
@@ -85,7 +89,11 @@ export const CodingPagePostPodCreation = ({
   // };
 
   if (!loaded) {
-    return <div className="flex flex-col w-full justify-center items-center ">Loading...</div>;
+    return (
+      <div className="container flex flex-col justify-center items-center text-4xl space-y-6 w-[400px]">
+        Loading...
+      </div>
+    );
   }
   return (
     <div className="flex flex-col w-full">
