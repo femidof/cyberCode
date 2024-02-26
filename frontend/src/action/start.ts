@@ -33,8 +33,8 @@ export const start = async (userId: string, replId: string) => {
   const namespace = "default";
 
   try {
-    // TODO Error on the service.yaml file passed
-    const kubeManifests = readAndParseKubeYaml(path.join(__dirname, "../lib/service.yaml"), replId);
+    
+    const kubeManifests = readAndParseKubeYaml(process.cwd()+"/src/lib/service.yaml", replId);
         for (const manifest of kubeManifests) {
             switch (manifest.kind) {
                 case "Deployment":
