@@ -76,7 +76,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: service_name.peetcode.com
+  - host: service_name.crosswirex.app
     http:
       paths:
       - path: /
